@@ -489,3 +489,12 @@ Caso tenha algum problema, poderá acessar esse Link:
 
 <https://github.com/Microsoft/vscode-chrome-debug/blob/master/README.md#troubleshooting>
 
+---
+
+## Criando o projeto
+
+Vamos iniciar utilizando o comando
+
+```bash
+npx create-react-app my-app --template typescript
+```
