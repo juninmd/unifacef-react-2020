@@ -21,7 +21,7 @@
 * [Ryhan Gustavo Brunello]()
 * [Fernando Soares]()
 * [CLEVELANDIO MARGIO DA SILVA]()
-* [Iago Bettarello]()
+* [Iago Bettarello](https://github.com/bettarelloiago/unifacef-react-typescript)
 * [Kenneth Gottschalk de Azevedo]()
 * [Loner Ribeiro Patti]()
 * [André Luis Borges]()
