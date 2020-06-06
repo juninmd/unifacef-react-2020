@@ -20,7 +20,7 @@
 * [Éder Martins]()
 * [Ryhan Gustavo Brunello]()
 * [Fernando Soares]()
-* [CLEVELANDIO MARGIO DA SILVA]()
+* [CLEVELANDIO MARGIO DA SILVA](https://github.com/Paratiy/unifacef-react-typescript)
 * [Iago Bettarello]()
 * [Kenneth Gottschalk de Azevedo]()
 * [Loner Ribeiro Patti]()
