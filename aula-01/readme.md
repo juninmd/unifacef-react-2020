@@ -12,6 +12,7 @@
 * <https://github.com/juninmd/star-wars-api>
 * <https://github.com/juninmd/unifacef-react-typescript>
 * <https://app.netlify.com/>
+* <https://thisdavej.com/right-click-on-windows-folder-and-open-with-visual-studio-code/>
 
 ## Ementa
 
