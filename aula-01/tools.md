@@ -226,3 +226,6 @@ Nem sempre ter todo e qualquer JavaScript/CSS do seu projeto num único arquivo 
 onde você modulariza partes reaproveitáveis do seu projeto, facilitando o desenvolvimento independente,
 por exemplo, ter uma equipe trabalhando em um módulo X e outra num módulo Y, mas ambos de um mesmo projeto.
 
+## Mobx
+
+![imagem](imagens/mobx.png)

@@ -61,7 +61,8 @@ Ao invés de separar tecnologias artificialmente colocando markup e lógica em a
 No exemplo abaixo, declaramos uma variável chamada name e então a usamos dentro do JSX ao envolvê-la com chaves:
 
 ```jsx
-const name = 'Josh Perez';const element = <h1>Hello, {name}</h1>;
+const name = 'Josh Perez';
+const element = <h1>Hello, {name}</h1>;
 ReactDOM.render(
   element,
   document.getElementById('root')
