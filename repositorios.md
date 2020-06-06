@@ -18,7 +18,7 @@
 * [Murilo Scapim]()
 * [Bruno Pádua]()
 * [Éder Martins]()
-* [Ryhan Gustavo Brunello]()
+* [Ryhan Gustavo Brunello](https://github.com/ryhangbrunello/unifacef-react-rgb)
 * [Fernando Soares]()
 * [CLEVELANDIO MARGIO DA SILVA]()
 * [Iago Bettarello]()
