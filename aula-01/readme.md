@@ -274,8 +274,13 @@ export default class HomeStore {
   @observable records: any[] = [];
 
   @action buildRecords = async () => {
-    const { data } = await getPrice();
-    this.records = Object.values(data);
+   try {
+      const { data } = await getPrice();
+      this.records = Object.values(data);
+    } catch (error) {
+      this.records = [];
+      throw new Error('Falha ao obter cotação');
+    }
   }
 
 }
