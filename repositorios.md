@@ -10,7 +10,7 @@
 * [Danilo Alves]()
 * [Caio Cesar Alves Borges]()
 * [Miguel Molina]()
-* [Luismar Pavani]()
+* [Luismar Pavani](https://github.com/LuismarPavani/unifacef-react-typescript)
 * [Caio Santos Freitas]()
 * [Lucas Rafael]()
 * [Everson Pereira]()
