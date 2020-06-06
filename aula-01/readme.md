@@ -615,3 +615,89 @@ e apague a linha .env.local
 
 Vamos fazer o deploy na nuvem do projeto
 <https://app.netlify.com/start>
+
+Vamos criar o componente de loading, dentro de 
+
+src/components/loading
+
+style.css
+
+```css
+.loadingWall .loadingCircle {
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  overflow: show;
+  margin: auto;
+  border-radius: 80%;
+  border-bottom: 13px solid #e25335;
+  border-top: 13px solid #2185d0;
+  border-left:13px solid green;
+  border-right:13px solid #fb9600 ;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 0.5s linear infinite;
+  box-shadow: 0px 0.3px 4px 0px black;
+
+}
+
+.loadingWall {
+  content: "";
+  bottom: 0;
+  background: #fff9;
+  z-index: 999999;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+```
+
+```tsx
+import * as React from 'react';
+import './style.css';
+
+export default class Loading extends React.Component {
+  render() {
+    return (
+      <div id='loadingSpinner' className='loadingWall' data-requests='0'>
+        <div className='loadingCircle' />
+      </div>);
+  }
+}
+
+export const loadingOn = () => {
+  const el = (document.querySelector('#loadingSpinner')) as any;
+  if (el === null) {
+    return;
+  }
+
+  el.style.display = 'block';
+  el.setAttribute('data-requests', Number(el.getAttribute('data-requests')) + 1);
+};
+
+export const loadingOff = () => {
+  const el = (document.querySelector('#loadingSpinner')) as any;
+  if (el === null) {
+    return;
+  }
+  if (Number(el.getAttribute('data-requests')) > 0) {
+    el.setAttribute('data-requests', Number(el.getAttribute('data-requests')) - 1);
+  }
+
+  if (Number(el.getAttribute('data-requests')) === 0) {
+    el.style.display = 'none';
+    return;
+  }
+
+};
+```
