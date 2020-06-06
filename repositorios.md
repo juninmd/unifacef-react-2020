@@ -13,7 +13,7 @@
 * [Luismar Pavani]()
 * [Caio Santos Freitas]()
 * [Lucas Rafael]()
-* [Everson Pereira]()
+* [Everson Pereira](https://github.com/eversonpereira/react)
 * [Fernando Soares]()
 * [Murilo Scapim]()
 * [Bruno Pádua]()
