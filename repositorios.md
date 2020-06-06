@@ -24,4 +24,4 @@
 * [Iago Bettarello]()
 * [Kenneth Gottschalk de Azevedo]()
 * [Loner Ribeiro Patti]()
-* [André Luis Borges]()
+* [André Luis Borges](https://github.com/Andre-Borges/unifacef-react)
