@@ -4,7 +4,7 @@
 * [Willyan Luindayk Machado]()
 * [Gabriel Chiarelo]()
 * [Danilo S. Andrade]()
-* [Bruno Brancalhão]()
+* [Bruno Brancalhão](https://github.com/brunobrancalhao/unifacef-react)
 * [Alex Felipe Barbosa]()
 * [Rafael Henrique de Morais]()
 * [Danilo Alves]()
