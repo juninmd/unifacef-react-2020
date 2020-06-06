@@ -25,3 +25,4 @@
 * [Kenneth Gottschalk de Azevedo]()
 * [Loner Ribeiro Patti]()
 * [André Luis Borges]()
+* [Rafael Ortolani](https://github.com/rafaelortolani/react-temporario)
