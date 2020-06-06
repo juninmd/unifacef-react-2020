@@ -74,10 +74,71 @@ E modifiquem o conteúdo em texto e deixem a página recarregar.
 Vamos agora adicionar novas dependencias aos projeto
 
 ```bash
-yarn add axios history jsonwebtoken semantic-ui-css semantic-ui-react sweetalert2 @sentry/browser lodash mobx mobx-react mobx-react-router react-router-dom semantic-ui-css semantic-ui-react sweetalert2 @types/react-router-dom @types/history @types/lodash @types/node
+yarn add axios history jsonwebtoken semantic-ui-css semantic-ui-react sweetalert2 @sentry/browser lodash mobx mobx-react mobx-react-router react-router-dom sweetalert2 @types/react-router-dom @types/history @types/lodash @types/node
 ```
 
 Ajustar dependencias no `package.json`, separar o que é dependência de desenvolvimento e de projeto.
+
+Seu package.json deve ficar assim:
+
+```json
+{
+  "name": "unifacef-react-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@sentry/browser": "^5.16.1",
+    "axios": "^0.19.2",
+    "history": "^4.10.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.2.2",
+    "mobx-react-router": "^4.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2",
+    "sweetalert2": "^9.14.0"
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.5",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/history": "^4.7.6",
+    "@types/jest": "^24.0.0",
+    "@types/lodash": "^4.14.155",
+    "@types/node": "^14.0.11",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "react-scripts": "3.4.1",
+    "typescript": "~3.7.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
+```
 
 Vamos utilizar nesse projeto como framework CSS o Semantic UI
 
@@ -142,73 +203,230 @@ Vamos criar a seguinte árvore de pastas no projeto:
 
 ![imagem](./imagens/11.png)
 
+Dentro de apis crie o arquivo `economy.api.ts`
+
+```text
+src/apis/economy.api.ts
+```
+
+Ficando assim:
+
+```ts
+import axios from 'axios';
+
+export const getPrice = async () => {
+  return axios.request({ url: 'https://economia.awesomeapi.com.br/json/all' })
+}
+```
+
 Após isso, dentro de containers, crie a pasta home, e dentro dela crie dois arquivos ficando nos seguintes caminhos
 
 ```text
 src/containers/home/store.ts
 ```
 
+Dentro da store deixe assim:
+
+```ts
+import { getPrice } from './../../apis/economy.api';
+import { action, observable } from 'mobx';
+
+export default class HomeStore {
+  @observable records: any[] = [];
+
+  @action buildRecords = async () => {
+    const { data } = await getPrice();
+    this.records = Object.values(data);
+  }
+
+}
+const home = new HomeStore();
+export { home };
+
+```
+
 ```text
 src/containers/home/index.tsx
 ```
 
-Seu package.json deve ficar assim:
+Dentro da index, deixe assim:
 
-```json
-{
-  "name": "unifacef-react-typescript",
-  "version": "1.0.0",
-  "private": true,
-  "dependencies": {
-    "@sentry/browser": "^5.16.1",
-    "axios": "^0.19.2",
-    "history": "^4.10.1",
-    "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.15",
-    "mobx": "^5.15.4",
-    "mobx-react": "^6.2.2",
-    "mobx-react-router": "^4.1.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.88.2",
-    "sweetalert2": "^9.14.0"
-  },
-  "devDependencies": {
-    "@types/react-router-dom": "^5.1.5",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/history": "^4.7.6",
-    "@types/jest": "^24.0.0",
-    "@types/lodash": "^4.14.155",
-    "@types/node": "^14.0.11",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+```tsx
+import * as React from 'react';
+
+import { Card, Container, Grid, Header, Icon } from 'semantic-ui-react';
+import { inject, observer } from 'mobx-react';
+
+import HomeStore from './store';
+import NewRouterStore from '../../mobx/router.store';
+
+interface Props {
+  router: NewRouterStore;
+  home: HomeStore;
+}
+
+@inject('router', 'home')
+@observer
+export default class Home extends React.Component<Props> {
+
+  async componentDidMount() {
+    const { buildRecords } = this.props.home;
+    await buildRecords();
+  }
+
+  render() {
+
+    const { records } = this.props.home;
+
+    return (
+      <Container>
+        <Grid divided='vertically'>
+          <Grid.Row columns={2}>
+            <Grid.Column>
+              <Header color='blue' as='h2'>
+                <Header.Content>
+                  Home
+                 <Header.Subheader>Moedas agora</Header.Subheader>
+                </Header.Content>
+              </Header>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+        <Card.Group itemsPerRow={2}>
+          {records.map((e) => {
+            return (
+              <Card>
+                <Card.Content>
+                  <Card.Meta><Icon name='dollar' />{e.name}</Card.Meta>
+                  <Card.Description>R$ {e.ask}</Card.Description>
+                </Card.Content>
+              </Card>)
+          })}
+        </Card.Group>
+      </Container>
+    );
+  }
+}
+```
+
+Crie uma nova pasta dentro de containers chamada sobre
+
+Adicione um arquivo index.tsx
+
+```text
+src/containers/sobre/index.tsx
+```
+
+```tsx
+import * as React from 'react';
+import { Container, Grid, Header } from 'semantic-ui-react';
+import { inject, observer } from 'mobx-react';
+import NewRouterStore from '../../mobx/router.store';
+
+interface Props {
+  router: NewRouterStore;
+}
+
+@inject('router')
+@observer
+export default class Sobre extends React.Component<Props> {
+  render() {
+    return (
+      <Container>
+        <Grid divided='vertically'>
+          <Grid.Row columns={2}>
+            <Grid.Column>
+              <Header color='blue' as='h2'>
+                <Header.Content>
+                  Sobre
+                 <Header.Subheader>Um pouco sobre mim</Header.Subheader>
+                </Header.Content>
+              </Header>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Container>
+    );
+  }
+}
+```
+
+Crie uma nova pasta chamada not-found
+
+```text
+src/containers/not-found/index.tsx
+```
+
+```tsx
+import * as React from 'react';
+import { Container } from 'semantic-ui-react';
+
+export default class NotFound extends React.Component {
+
+  render() {
+    return (
+      <Container><p>Página não encontrada!</p></Container>
+    );
+  }
+}
+```
+
+Dentro de routes crie dois arquivos
+
+```text
+endpoints.ts
+```
+
+```ts
+import { RouteProps } from 'react-router-dom';
+import Sobre from '../containers/sobre';
+import Home from '../containers/home';
+
+const publicUrl = process.env.PUBLIC_URL;
+
+interface EndPointsProps extends RouteProps {
+  name?: string
+}
+
+export const endpoints: EndPointsProps[] = [
+  { path: `${publicUrl}/`, component: Home, exact: true },
+  { path: `${publicUrl}/home`, name: 'Home', component: Home, exact: true },
+  { path: `${publicUrl}/sobre`, name: 'Sobre', component: Sobre, exact: true },
+];
+```
+
+```text
+index.tsx
+```
+
+```tsx
+import * as React from 'react';
+import { observer } from 'mobx-react';
+import {
+  Route,
+  withRouter,
+  Switch,
+} from 'react-router-dom';
+import { Divider } from 'semantic-ui-react';
+import { endpoints } from './endpoints';
+
+// @ts-ignore
+@withRouter
+@observer
+export default class Routes extends React.Component {
+
+  render() {
+    return (
+      <>
+        <Divider hidden={true} />
+        <Switch>
+          {endpoints.map((route, i) => (
+            <Route key={i} {...route} />)
+          )}
+          <Route path='*' exact={true} render={props => <NotFound {...props} />} />
+        </Switch>
+      </>
+    );
   }
 }
 ```
