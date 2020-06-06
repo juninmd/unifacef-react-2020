@@ -16,7 +16,7 @@
 * [Everson Pereira]()
 * [Fernando Soares]()
 * [Murilo Scapim]()
-* [Bruno Pádua]()
+* [Bruno Pádua](https://github.com/brunopadua05/unifacef-reactJS)
 * [Éder Martins]()
 * [Ryhan Gustavo Brunello]()
 * [Fernando Soares]()
