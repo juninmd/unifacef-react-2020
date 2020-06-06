@@ -553,3 +553,15 @@ export default class MainMenu extends React.Component<Props> {
 
 }
 ```
+
+Criar arquivo na raiz do projeto
+
+```text
+.env.local
+```
+
+Contendo as informaçãoes do seu Sentry, por exemplo:
+
+```text
+REACT_APP_SENTRY_DSN=https:/batata@o95682.ingest.sentry.io/5266721
+```
