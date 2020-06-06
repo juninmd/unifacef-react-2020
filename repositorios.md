@@ -14,7 +14,7 @@
 * [Caio Santos Freitas]()
 * [Lucas Rafael]()
 * [Everson Pereira]()
-* [Fernando Soares]()
+* [Fernando Soares](https://github.com/fernandohfs/unifacef-reactjs-typescript)
 * [Murilo Scapim]()
 * [Bruno Pádua]()
 * [Éder Martins]()
