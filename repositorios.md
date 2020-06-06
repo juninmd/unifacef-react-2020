@@ -5,7 +5,7 @@
 * [Gabriel Chiarelo]()
 * [Danilo S. Andrade]()
 * [Bruno Brancalhão]()
-* [Alex Felipe Barbosa]()
+* [Alex Felipe Barbosa] https://github.com/AlexFelipeBarbosa/react_facef
 * [Rafael Henrique de Morais]()
 * [Danilo Alves]()
 * [Caio Cesar Alves Borges]()
