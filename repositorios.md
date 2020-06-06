@@ -12,7 +12,7 @@
 * [Miguel Molina]()
 * [Luismar Pavani]()
 * [Caio Santos Freitas]()
-* [Lucas Rafael]()
+* [Lucas Rafael](https://github.com/lukasrafael1407/React-Unifacef)
 * [Everson Pereira]()
 * [Fernando Soares]()
 * [Murilo Scapim]()
