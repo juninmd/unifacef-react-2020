@@ -565,3 +565,16 @@ Contendo as informaçãoes do seu Sentry, por exemplo:
 ```text
 REACT_APP_SENTRY_DSN=https:/batata@o95682.ingest.sentry.io/5266721
 ```
+
+Faça o build do projeto
+
+```bash
+yarn build
+```
+
+Instale o servidor local e habilite o projeto
+
+```bash
+  yarn global add serve
+  serve -s build
+```
