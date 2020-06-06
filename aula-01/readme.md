@@ -134,8 +134,15 @@ Vamos criar a seguinte árvore de pastas no projeto:
 
 Após isso, dentro de containers, crie a pasta home, e dentro dela crie dois arquivos ficando nos seguintes caminhos
 
-> src/containers/home/store.ts
-> src/containers/home/index.tsx
+```text
+src/containers/home/store.ts
+```
+
+```text
+src/containers/home/index.tsx
+```
+
+Seu package.json deve ficar assim:
 
 ```json
 {
