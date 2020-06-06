@@ -297,14 +297,12 @@ import { Card, Container, Grid, Header, Icon } from 'semantic-ui-react';
 import { inject, observer } from 'mobx-react';
 
 import HomeStore from './store';
-import NewRouterStore from '../../mobx/router.store';
 
 interface Props {
-  router: NewRouterStore;
   home: HomeStore;
 }
 
-@inject('router', 'home')
+@inject('home')
 @observer
 export default class Home extends React.Component<Props> {
 
