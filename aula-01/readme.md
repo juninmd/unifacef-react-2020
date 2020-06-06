@@ -703,3 +703,155 @@ export const loadingOff = () => {
 
 };
 ```
+
+crie uma pasta chamada combustivel em src/containers
+
+adicione a store.ts
+
+```ts
+import { action, observable } from 'mobx';
+import swal from 'sweetalert2';
+
+export default class CombustivelStore {
+  @observable etanol = 0;
+  @observable gasolina = 0;
+
+  @action submit = () => {
+
+    const { etanol, gasolina } = this;
+    if (!isNaN(Number(etanol)) && !isNaN((Number(gasolina)))) {
+      const value = Number(etanol) / Number(gasolina);
+
+      if (value > 0.70) {
+        swal.fire('Vale a pena gasolina', '', 'success');
+      } else if (value < 0.70) {
+        swal.fire('Vale a pena etanol', '', 'success');
+      } else {
+        swal.fire('São equivalentes', '', 'info');
+      }
+    } else {
+      swal.fire('Preencha valores válidos', '', 'warning');
+    }
+  }
+
+  @action handleForm = (event: any, select?: any) => {
+    const { name, value } = select || event.target;
+    this[name] = value;
+  }
+}
+
+const combustivel = new CombustivelStore();
+export { combustivel };
+```
+
+adicione o index.tsx
+
+```tsx
+import * as React from 'react';
+
+import { Container, Grid, Header, Form, Button } from 'semantic-ui-react';
+import { inject, observer } from 'mobx-react';
+
+import CombustivelStore from './store';
+
+interface Props {
+  combustivel: CombustivelStore
+}
+
+@inject('combustivel')
+@observer
+export default class Combustivel extends React.Component<Props>{
+
+  render() {
+
+    const { etanol, gasolina, submit, handleForm } = this.props.combustivel;
+
+    const submitForm = (e) => {
+      e.preventDefault();
+      submit();
+    }
+
+    return (
+      <Container>
+        <Grid divided='vertically'>
+          <Grid.Row columns={2}>
+            <Grid.Column>
+              <Header color='blue' as='h2'>
+                <Header.Content>
+                  Combustível
+                  <Header.Subheader>
+                    Etanol ou Gasolina?
+                  </Header.Subheader>
+                </Header.Content>
+              </Header>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+        <Form onSubmit={submitForm}>
+          <Form.Group widths='equal'>
+            <Form.Field>
+              <label>Preço da Gasolina</label>
+              <input step='any'
+                max='99'
+                value={gasolina}
+                onChange={handleForm}
+                name='gasolina'
+                type='number'
+                placeholder='ex R$ 4.05' />
+            </Form.Field>
+            <Form.Field>
+              <label>Preço do Etanol</label>
+              <input step='any'
+                max='99'
+                value={etanol}
+                onChange={handleForm}
+                name='etanol'
+                type='number'
+                placeholder='ex R$ 2.00' />
+            </Form.Field>
+          </Form.Group>
+          <Button type='submit'>Consultar</Button>
+        </Form>
+      </Container>
+    );
+  }
+}
+```
+
+Adicione a store no arquivo do mobx
+
+src/mobx/index.ts
+
+```ts
+import { home } from '../containers/home/store';
+import { combustivel } from '../containers/combustivel/store';
+import { router } from './router.store';
+
+export {
+  router,
+  combustivel,
+  home
+}
+```
+
+e deixe as rotas assim:
+
+```tsx
+import Home from "../containers/home";
+import { RouteProps } from "react-router-dom";
+import Sobre from "../containers/sobre";
+import Combustivel from "../containers/combustivel";
+
+const publicUrl = process.env.PUBLIC_URL;
+
+interface EndPointsProps extends RouteProps {
+  name?: string
+}
+
+export const endpoints: EndPointsProps[] = [
+  { path: `${publicUrl}/`, component: Home, exact: true },
+  { path: `${publicUrl}/home`, name: 'Home', component: Home, exact: true },
+  { path: `${publicUrl}/sobre`, name: 'Sobre', component: Sobre, exact: true },
+  { path: `${publicUrl}/combustivel`, name: 'Combustível', component: Combustivel, exact: true },
+];
+```
