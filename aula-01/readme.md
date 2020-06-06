@@ -332,9 +332,9 @@ export default class Home extends React.Component<Props> {
           </Grid.Row>
         </Grid>
         <Card.Group itemsPerRow={2}>
-          {records.map((e) => {
+         {records.map((e, index) => {
             return (
-              <Card>
+              <Card key={index}>
                 <Card.Content>
                   <Card.Meta><Icon name='dollar' />{e.name}</Card.Meta>
                   <Card.Description>R$ {e.ask}</Card.Description>
