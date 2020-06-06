@@ -52,6 +52,25 @@ Abra a pasta
 cd unifacef-react-typescript
 ```
 
+Adcionar Título da página
+
+No arquivo
+
+> public/index.html
+
+Vamos alterar o atributo do título para
+
+```tsx
+ <title>Unifacef React App</title>
+```
+
+Abra o arquivo
+
+> src/app.tsx
+
+E modifiquem o conteúdo em texto e deixem a página recarregar.
+
+
 Vamos agora adicionar novas dependencias aos projeto
 
 ```bash
@@ -117,16 +136,6 @@ Vamos configurar o arquivo `tsconfig.json`
     "src"
   ]
 }
-```
-
-No arquivo
-
-> public/index.html
-
-Vamos alterar o atributo do título
-
-```tsx
- <title>Unifacef React App</title>
 ```
 
 Vamos criar a seguinte árvore de pastas no projeto:
