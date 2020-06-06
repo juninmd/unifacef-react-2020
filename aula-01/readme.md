@@ -578,3 +578,9 @@ Instale o servidor local e habilite o projeto
   yarn global add serve
   serve -s build
 ```
+
+Abra o .gitignore
+e apague a linha .env.local
+
+Vamos fazer o deploy na nuvem do projeto
+<https://app.netlify.com/start>
