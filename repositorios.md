@@ -17,7 +17,7 @@
 * [Fernando Soares]()
 * [Murilo Scapim]()
 * [Bruno Pádua]()
-* [Éder Martins]()
+* [Éder Martins](https://github.com/caniss/unifacef-reactjs)
 * [Ryhan Gustavo Brunello]()
 * [Fernando Soares]()
 * [CLEVELANDIO MARGIO DA SILVA]()
