@@ -11,6 +11,7 @@
 * <https://sentry.io/welcome/>
 * <https://github.com/juninmd/star-wars-api>
 * <https://github.com/juninmd/unifacef-react-typescript>
+* <https://app.netlify.com/>
 
 ## Ementa
 
