@@ -451,6 +451,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import { Divider } from 'semantic-ui-react';
+import NotFound from '../containers/not-found';
 import { endpoints } from './endpoints';
 
 // @ts-ignore
