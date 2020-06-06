@@ -579,7 +579,7 @@ import { configureScope, init } from '@sentry/browser'
 })();
 ```
 
-E depois importe em index.tsx
+E depois importe em src/index.tsx
 
 ```ts
 import './plugins/sentry.plugin';
