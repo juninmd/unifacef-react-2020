@@ -662,6 +662,8 @@ style.css
 }
 ```
 
+index.tsx
+
 ```tsx
 import * as React from 'react';
 import './style.css';
