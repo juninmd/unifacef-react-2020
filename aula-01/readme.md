@@ -152,6 +152,45 @@ Após isso, crie uma conta na plataforma Sentry.
 
 Anote a variável dentro de um arquivo .env e cole como `REACT_APP_SENTRY_DSN`.
 
+Altere o arquivo App.tsx
+
+```tsx
+import './App.css';
+
+import React from 'react';
+import logo from './logo.svg';
+
+function App() {
+
+  const methodDoesNotExist = () => { 
+    throw new Error('ERRO')
+  }
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Vamos aprender React
+        </p>
+        <button onClick={methodDoesNotExist}>Break the world</button>;
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          React é legal
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+
+```
+
 Vamos configurar o arquivo `tsconfig.json`
 
 ```json
