@@ -23,5 +23,5 @@
 * [CLEVELANDIO MARGIO DA SILVA]()
 * [Iago Bettarello]()
 * [Kenneth Gottschalk de Azevedo]()
-* [Loner Ribeiro Patti]()
+* [Loner Ribeiro Patti](https://github.com/lonerpatti/unifacef-react-typescript.git)
 * [André Luis Borges]()
