@@ -15,7 +15,7 @@
 * [Lucas Rafael]()
 * [Everson Pereira]()
 * [Fernando Soares]()
-* [Murilo Scapim]()
+* [Murilo Scapim](https://github.com/murilo-scapim/unifacef-react-typescript)
 * [Bruno Pádua]()
 * [Éder Martins]()
 * [Ryhan Gustavo Brunello]()
