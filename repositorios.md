@@ -8,7 +8,7 @@
 * [Alex Felipe Barbosa]()
 * [Rafael Henrique de Morais]()
 * [Danilo Alves]()
-* [Caio Cesar Alves Borges]()
+* [Caio Cesar Alves Borges](https://github.com/caioborges89/unifacef-react-cotacao)
 * [Miguel Molina]()
 * [Luismar Pavani]()
 * [Caio Santos Freitas]()
