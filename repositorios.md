@@ -1,6 +1,6 @@
 # Repositorios
 
-* [Fabricio Coutinho de Medeiros]()
+* [Fabricio Coutinho de Medeiros](https://github.com/fcamedeiros/unifacef-react-typescript)
 * [Willyan Luindayk Machado](https://github.com/luindayk/unifacef-react-frontend)
 * [Gabriel Chiarelo]()
 * [Danilo S. Andrade]()
@@ -26,4 +26,3 @@
 * [André Luis Borges](https://github.com/Andre-Borges/unifacef-react)
 * [Rafael Ortolani](https://github.com/rafaelortolani/react-temporario)
 * [Caio Silva](https://github.com/CaioSilvaSilva/react-unifacef)
-
