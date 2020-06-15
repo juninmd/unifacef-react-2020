@@ -18,7 +18,7 @@
 * [Murilo Scapim](https://github.com/murilo-scapim/unifacef-react-typescript)
 * [Bruno Pádua](https://github.com/brunopadua05/unifacef-reactJS)
 * [Éder Martins](https://github.com/caniss/unifacef-reactjs)
-* [Ryhan Gustavo Brunello]()
+* [Ryhan Gustavo Brunello](https://github.com/ryhangbrunello/unifacef-react-rgb)
 * [Fernando Soares]()
 * [CLEVELANDIO MARGIO DA SILVA](https://github.com/Paratiy/unifacef-react-typescript)
 * [Iago Bettarello]()
