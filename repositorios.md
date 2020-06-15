@@ -1,7 +1,7 @@
 # Repositorios
 
 * [Fabricio Coutinho de Medeiros]()
-* [Willyan Luindayk Machado]()
+* [Willyan Luindayk Machado](https://github.com/luindayk/unifacef-react-frontend)
 * [Gabriel Chiarelo]()
 * [Danilo S. Andrade]()
 * [Bruno Brancalhão]()
