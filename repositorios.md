@@ -14,12 +14,11 @@
 * [Caio Santos Freitas]()
 * [Lucas Rafael](https://github.com/lukasrafael1407/React-Unifacef)
 * [Everson Pereira](https://github.com/eversonpereira/react)
-* [Fernando Soares]()
+* [Fernando Soares](https://github.com/fernandohfs/unifacef-reactjs-typescript)
 * [Murilo Scapim](https://github.com/murilo-scapim/unifacef-react-typescript)
 * [Bruno Pádua](https://github.com/brunopadua05/unifacef-reactJS)
 * [Éder Martins](https://github.com/caniss/unifacef-reactjs)
 * [Ryhan Gustavo Brunello](https://github.com/ryhangbrunello/unifacef-react-rgb)
-* [Fernando Soares]()
 * [CLEVELANDIO MARGIO DA SILVA](https://github.com/Paratiy/unifacef-react-typescript)
 * [Iago Bettarello]()
 * [Kenneth Gottschalk de Azevedo]()
@@ -27,3 +26,4 @@
 * [André Luis Borges](https://github.com/Andre-Borges/unifacef-react)
 * [Rafael Ortolani](https://github.com/rafaelortolani/react-temporario)
 * [Caio Silva](https://github.com/CaioSilvaSilva/react-unifacef)
+
