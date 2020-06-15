@@ -5,9 +5,9 @@
 * [Gabriel Chiarelo]()
 * [Danilo S. Andrade]()
 * [Bruno Brancalhão]()
-* [Alex Felipe Barbosa]()
+* [Alex Felipe Barbosa](https://github.com/AlexFelipeBarbosa/react_face)
 * [Rafael Henrique de Morais]()
-* [Danilo Alves]( https://github.com/daniloalves19/unifacef-react-typescript )
+* [Danilo Alves](https://github.com/daniloalves19/unifacef-react-typescript)
 * [Caio Cesar Alves Borges](https://github.com/caioborges89/unifacef-react-cotacao)
 * [Miguel Molina]()
 * [Luismar Pavani](https://github.com/LuismarPavani/unifacef-react-typescript)
@@ -26,3 +26,4 @@
 * [André Luis Borges](https://github.com/Andre-Borges/unifacef-react)
 * [Rafael Ortolani](https://github.com/rafaelortolani/react-temporario)
 * [Caio Silva](https://github.com/CaioSilvaSilva/react-unifacef)
+
