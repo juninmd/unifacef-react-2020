@@ -7,7 +7,7 @@
 * [Bruno Brancalhão]()
 * [Alex Felipe Barbosa]()
 * [Rafael Henrique de Morais]()
-* [Danilo Alves]()
+* [Danilo Alves]( https://github.com/daniloalves19/unifacef-react-typescript )
 * [Caio Cesar Alves Borges](https://github.com/caioborges89/unifacef-react-cotacao)
 * [Miguel Molina]()
 * [Luismar Pavani]()
