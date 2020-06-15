@@ -25,3 +25,4 @@
 * [Kenneth Gottschalk de Azevedo]()
 * [Loner Ribeiro Patti](https://github.com/lonerpatti/unifacef-react-typescript.git)
 * [André Luis Borges](https://github.com/Andre-Borges/unifacef-react)
+* [Rafael Ortolani](https://github.com/rafaelortolani/react-temporario)
