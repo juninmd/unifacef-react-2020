@@ -293,6 +293,30 @@ import StarWarsDetails from "../containers/star-wars-details";
   { path: `${publicUrl}/star-wars/:id`, component: StarWarsDetails, exact: true },
 ```
 
+Atualize a store
+
+```text
+src/mobx/index.ts
+```
+
+```ts
+import { home } from '../containers/home/store';
+import { combustivel } from '../containers/combustivel/store';
+import { router } from './router.store';
+import { starWars } from '../containers/star-wars/store';
+import { starWarsDetails } from '../containers/star-wars-details/store';
+
+export {
+  router,
+  combustivel,
+  home,
+  starWars,
+  starWarsDetails,
+}
+```
+
+---
+
 Corrigir componente de Loading
 
 ```text
