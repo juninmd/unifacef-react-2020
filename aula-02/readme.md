@@ -555,7 +555,35 @@ export default class Cache extends React.Component<Props>{
 }
 ```
 
+Adicionar store no mobx
 
+```text
+src/mobx/index.ts
+```
+
+```ts
+import { home } from '../containers/home/store';
+import { combustivel } from '../containers/combustivel/store';
+import { router } from './router.store';
+import { starWars } from '../containers/star-wars/store';
+import { starWarsDetails } from '../containers/star-wars-details/store';
+import { cache } from '../containers/cache/store';
+
+export {
+  router,
+  combustivel,
+  home,
+  starWars,
+  starWarsDetails,
+  cache,
+}
+```
+
+Adicione a nova rota `cache`
+
+```ts
+  { path: `${publicUrl}/cache`, name: 'Cache', component: Cache, exact: true },
+```
 
 ## One Signal
 
