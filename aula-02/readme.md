@@ -418,7 +418,11 @@ export function assign(obj: any, prop: string | string[], value: any) {
 
 Crie uma pasta chamada cache dentro de containers
 
-Adicione o seguinte conteúdo
+Adicione o seguinte conteúdo criando o arquivo store.ts dentro
+
+```text
+src/containers/cache/store.ts
+```
 
 ```ts
 import { observable, action } from 'mobx';
