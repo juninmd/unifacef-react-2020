@@ -452,11 +452,17 @@ export default class CacheStore {
   }
 
   @action saveSessionStorage = () => {
-    localStorage.setItem('unifacef-session', this.session || '');
+    sessionStorage.setItem('unifacef-session', this.session || '');
   }
 
   @action loadForm = () => {
     this.cookie = this.getCookie('unifacef')
+  }
+
+  @action submit = () => {
+    this.saveCookie();
+    this.saveSessionStorage();
+    this.saveLocalStorage();
   }
 
   getCookie(cname) {
