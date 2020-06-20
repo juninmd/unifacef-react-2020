@@ -174,12 +174,32 @@ export default class StarWars extends React.Component<Props> {
 
 ```
 
-Crie uma nova pasta chamada star-wars-details dentro de containers
+Crie uma nova pasta chamada
+`star-wars-details`
+dentro de containers
 
 Crie um novo arquivo
 
 ```text
-src/containers/star-wars/store.ts
+src/containers/star-wars-details/store.ts
+```
+
+```ts
+import { action, observable } from 'mobx';
+import { getFilmById } from '../../apis/star-wars.api';
+
+export default class StarWarsDetailsStore {
+  @observable film: any = {};
+
+  @action buildFilmById = async (id: number) => {
+    const { data } = await getFilmById(id);
+    this.film = data;
+  }
+
+}
+const starWarsDetails = new StarWarsDetailsStore();
+export { starWarsDetails };
+
 ```
 
 Corrigir componente de Loading
