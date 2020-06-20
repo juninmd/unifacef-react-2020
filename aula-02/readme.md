@@ -28,7 +28,7 @@
 
 ## Star Wars
 
-Crie uma nov pasta chamada star-wars dentro de apis
+Crie uma nova pasta chamada star-wars dentro de apis
 
 Crie um novo arquivo
 
@@ -48,6 +48,21 @@ export const getFilms = async () => {
 export const getFilmById = async (id: number) => {
   return axios.request({ baseURL, url: `films/${id}` })
 }
+```
+
+Adicione as variáveis de ambiente nos seguintes arquivos
+
+.env
+.env.local
+
+```env
+REACT_APP_STAR_WARS_BASE_URL=https://star-wars-api-unifacef.herokuapp.com
+```
+
+Atualize a constante baseURL
+
+```tsx
+const baseURL = process.env.REACT_APP_STAR_WARS_BASE_URL;
 ```
 
 Crie uma nova pasta chamada star-wars dentro de containers
