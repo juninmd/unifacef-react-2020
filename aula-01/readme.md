@@ -476,7 +476,7 @@ export default class Routes extends React.Component {
 ```
 
 Crie o arquivo router.store.tsx
-dentro de mobx 
+dentro de mobx
 
 ```tsx
 import { RouterStore } from "mobx-react-router";

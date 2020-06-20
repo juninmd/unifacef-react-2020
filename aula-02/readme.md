@@ -11,15 +11,186 @@
 * <https://whatwebcando.today/>
 * <https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=pt-BR>
 * <https://developer.mozilla.org/pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB>
-
+* <chrome://flags/#enable-desktop-pwas-without-extensions>
+* <https://developer.mozilla.org/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json>
+* <https://www.google.com/chrome/>
 
 ## Ementa
 
-* Elementos Html5
 * Star Wars
+* Elementos Html5
 * Storages
   * Cookies
   * LocalStorage
   * SessionStorage
   * Indexed DB
+* PWA
+
+## Star Wars
+
+Crie uma nov pasta chamada star-wars dentro de apis
+
+Crie um novo arquivo
+
+```text
+src/apis/star-wars.api.ts
+```
+
+```tsx
+import axios from 'axios';
+
+const baseURL = 'https://star-wars-api-unifacef.herokuapp.com'; // trocar por env de ambiente
+
+export const getFilms = async () => {
+  return axios.request({ baseURL, url: 'films' })
+}
+
+export const getFilmById = async (id: number) => {
+  return axios.request({ baseURL, url: `films/${id}` })
+}
+```
+
+Crie uma nova pasta chamada star-wars dentro de containers
+
+Crie um novo arquivo
+
+```text
+src/containers/star-wars/store.ts
+```
+
+```tsx
+import { action, observable } from 'mobx';
+import { getFilms } from '../../apis/star-wars.api';
+
+export default class StarWarsStore {
+  @observable films: any[] = [];
+
+  @action buildFilms = async () => {
+    const { data } = await getFilms();
+    this.films = data;
+  }
+
+}
+const starWars = new StarWarsStore();
+export { starWars };
+```
+
+Adicione a store na lista de stores
+
+```text
+src/mobx/index.ts
+```
+
+```tsx
+import { router } from './router.store';
+import { home } from '../containers/home/store';
+import { combustivel } from '../containers/combustivel/store';
+import { starWars } from '../containers/star-wars/store';
+
+export {
+  router,
+  home,
+  combustivel,
+  starWars
+};
+```
+
+Crie um novo arquivo
+
+```text
+src/containers/star-wars/index.tsx
+```
+
+```tsx
+import * as React from 'react';
+import { Container, Card, Grid, Header, Image } from 'semantic-ui-react';
+import { inject, observer } from 'mobx-react';
+import NewRouterStore from '../../mobx/router.store';
+import StarWarsStore from './store';
+
+interface Props {
+  router: NewRouterStore;
+  starWars: StarWarsStore;
+}
+
+@inject('router', 'starWars')
+@observer
+export default class StarWars extends React.Component<Props> {
+
+  async componentDidMount() {
+    const { buildFilms } = this.props.starWars;
+    await buildFilms();
+  }
+
+  render() {
+
+   const { films } = this.props.starWars;
+
+    return (
+      <Container>
+        <Grid divided='vertically'>
+          <Grid.Row columns={2}>
+            <Grid.Column>
+              <Header color='blue' as='h2'>
+                <Header.Content>
+                  Star Wars
+                 <Header.Subheader>Lista de filmes</Header.Subheader>
+                </Header.Content>
+              </Header>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+        <Card.Group itemsPerRow={2}>
+          {films.map((film, index) => {
+            return (
+              <Card key={index}>
+                <Image src={film.photo} wrapped ui={false} size='small' />
+                <Card.Content>
+                  <Card.Meta>{film.title}</Card.Meta>
+                  <Card.Description>Episode {film.episode_id.toString()}</Card.Description>
+                </Card.Content>
+              </Card>)
+          })}
+        </Card.Group>
+      </Container>
+    );
+  }
+}
+
+```
+
+Crie uma nova pasta chamada star-wars-details dentro de containers
+
+Crie um novo arquivo
+
+```text
+src/containers/star-wars/store.ts
+```
+
+---
+
+## PWA
+
+Vamos conhecer um pouco dos recursos de PWA
+
+Instale a extensão LightHouse
+<https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=pt-BR>
+![imagem](./imagens/pwa.png)
   
+Habilitem as opções no chrome
+
+```text
+chrome://flags/#enable-desktop-pwas-local-updating
+chrome://flags/#enable-desktop-pwas-local-updating-throttle-persistence
+chrome://flags/#enable-desktop-pwas-tab-strip
+chrome://flags/#enable-desktop-pwas-without-extensions
+chrome://flags/#enable-desktop-minimal-ui
+```
+
+O Que podemos fazer hoje?
+
+<https://whatwebcando.today/>
+
+## MobX
+
+<https://chrome.google.com/webstore/detail/mobx-developer-tools/pfgnfdagidkfgccljigdamigbcnndkod>
