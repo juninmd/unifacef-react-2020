@@ -279,6 +279,20 @@ export default class StarWarsDetails extends React.Component<RouteComponentProps
 }
 ```
 
+Adicionar novo endpoint em
+
+```text
+src/routes/endpoints.ts
+```
+
+```ts
+import StarWarsDetails from "../containers/star-wars-details";
+```
+
+```ts
+  { path: `${publicUrl}/star-wars/:id`, component: StarWarsDetails, exact: true },
+```
+
 Corrigir componente de Loading
 
 ```text
