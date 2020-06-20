@@ -209,3 +209,7 @@ O Que podemos fazer hoje?
 ## MobX
 
 <https://chrome.google.com/webstore/detail/mobx-developer-tools/pfgnfdagidkfgccljigdamigbcnndkod>
+
+## Import Cost
+
+Extensão VsCode `wix.vscode-import-cost`
