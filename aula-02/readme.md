@@ -239,3 +239,14 @@ O Que podemos fazer hoje?
 ## Import Cost
 
 Extensão VsCode `wix.vscode-import-cost`
+
+## Forks
+
+Caso queira copiar o projeto final e sincronizar com seu fork
+
+```bash
+git remote add upstream https://github.com/juninmd/unifacef-react-typescript.git
+git pull upstream
+```
+
+<https://app.onesignal.com/apps/new>
