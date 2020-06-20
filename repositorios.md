@@ -6,7 +6,7 @@
 * [Danilo S. Andrade](https://github.com/daniloandrade47/unifacef-react-typscript.git)
 * [Bruno Brancalhão](https://github.com/brunobrancalhao/unifacef-react)
 * [Alex Felipe Barbosa](https://github.com/AlexFelipeBarbosa/react_face)
-* [Rafael Henrique de Morais]()
+* [Rafael Henrique de Morais](https://github.com/rhMorais/unifacef-react-typescript)
 * [Danilo Alves](https://github.com/daniloalves19/unifacef-react-typescript)
 * [Caio Cesar Alves Borges](https://github.com/caioborges89/unifacef-react-cotacao)
 * [Miguel Molina]()
