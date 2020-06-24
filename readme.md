@@ -10,3 +10,4 @@
 ## Aulas
 
 * [Aula 1](./aula-01/readme.md)
+* [Aula 2](./aula-02/readme.md)
