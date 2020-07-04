@@ -475,3 +475,96 @@ Criar arquivo em
 ```text
 /* /index.html 200
 ```
+
+> src/apis/corona.api.ts
+
+```ts
+import axios from 'axios';
+import { configs } from '../configs';
+
+const baseURL = configs.apis.corona;
+
+export interface IGlobal {
+  NewConfirmed: number;
+  TotalConfirmed: number;
+  NewDeaths: number;
+  TotalDeaths: number;
+  NewRecovered: number;
+  TotalRecovered: number;
+}
+
+export interface ICountry {
+  Country: string;
+  CountryCode: string;
+  Slug: string;
+  NewConfirmed: number;
+  TotalConfirmed: number;
+  NewDeaths: number;
+  TotalDeaths: number;
+  NewRecovered: number;
+  TotalRecovered: number;
+  Date: Date;
+}
+
+export interface ISummary {
+  Global: IGlobal;
+  Countries: ICountry[];
+  Date: Date;
+}
+
+export const getSummary = () => {
+  return axios.request<ISummary>({ baseURL, url: 'summary' })
+}
+
+export interface ICountryB {
+  Country: string;
+  Slug: string;
+  ISO2: string;
+}
+
+export const getCountries = () => {
+  return axios.request<ICountryB[]>({ baseURL, url: 'countries' });
+}
+```
+
+> src/containers/store.ts
+
+```ts
+import { action, observable } from 'mobx';
+import { getCountries, getSummary, ISummary, ICountryB } from '../../apis/corona.api';
+import { assign } from '../../utils/object.util';
+
+export default class CoronaStore {
+
+  @observable countryCode: string = '';
+
+  @observable summary?: ISummary;
+
+  @observable countries: ICountryB[] = [];
+
+  @action handleForm = (event: any, select?: any) => {
+    const { name, value } = select || event.target;
+    assign(this, name, value);
+  }
+
+  @action getCountries = async () => {
+    try {
+      const { data } = await getCountries();
+      this.countries = data;
+    } catch (error) {
+      this.countries = [];
+    }
+  }
+
+  @action getSummary = async () => {
+    try {
+      const { data } = await getSummary();
+      this.summary = data;
+    } catch (error) {
+      this.summary = undefined;
+    }
+  }
+}
+const corona = new CoronaStore();
+export { corona };
+```
