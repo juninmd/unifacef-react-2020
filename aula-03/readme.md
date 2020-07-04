@@ -1,5 +1,10 @@
 # Aula 03
 
+## Links Úteis
+
+* [Projeto Final](https://github.com/juninmd/unifacef-react-typescript)
+* [Covid19](https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest)
+
 ## Ementa
 
 * Ajustando variáveis de ambiente do projeto
@@ -41,3 +46,4 @@ Vamos criar uma conta no OneSignal, que será responsável por utilizar os push 
 https://onesignal.com/
 ```
 
+![imagem](./imagens/onesignal.jpg)
