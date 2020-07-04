@@ -40,6 +40,70 @@ REACT_APP_ONE_SIGNAL=<seu token do one signal>
 
 Vamos apagar o .env.local
 
+## Ajustando APIS
+
+> economy.api.ts
+
+```tsx
+import axios from 'axios';
+import { configs } from '../configs';
+
+export const getPrice = () => {
+  return axios.request({ url: configs.apis.economia });
+}
+```
+
+> star-wars.api.ts
+
+```tsx
+import axios from 'axios';
+import { configs } from '../configs';
+
+const baseURL = configs.apis.starWars;
+
+export const getFilms = () => {
+  return axios.request({ baseURL, url: 'films' })
+}
+
+export const getFilmById = (id: number) => {
+  return axios.request({ baseURL, url: `films/${id}` })
+}
+```
+
+> src/configs/index.ts
+
+```ts
+export const configs = {
+  apis: {
+    economia: process.env.REACT_APP_ECONOMIA_URL,
+    starWars: process.env.REACT_APP_STAR_WARS_BASE_URL
+  },
+  sentry: process.env.REACT_APP_SENTRY_DSN
+}
+```
+
+> src/plugins/sentry.plugin.ts
+
+```ts
+import { configureScope, init } from '@sentry/browser'
+import { configs } from '../configs';
+
+(() => {
+  // Desativa o plugin localhost
+  if (window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1') {
+    return;
+  }
+
+  const { sentry } = configs;
+
+  init({ dsn: sentry });
+
+  configureScope(scope => {
+  })
+})();
+```
+
 ## OneSignal
 
 Vamos criar uma conta no OneSignal, que será responsável por utilizar os push notifications do site
