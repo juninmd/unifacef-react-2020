@@ -38,6 +38,8 @@ REACT_APP_CORONA_URL=https://api.covid19api.com
 REACT_APP_ONE_SIGNAL=<seu token do one signal>
 ```
 
+Vamos apagar o .env.local
+
 ## OneSignal
 
 Vamos criar uma conta no OneSignal, que será responsável por utilizar os push notifications do site
