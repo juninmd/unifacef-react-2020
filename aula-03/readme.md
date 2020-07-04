@@ -465,3 +465,11 @@ export const getUser = (userName: string) => {
   return axios.request<GetGithub>({ baseURL, url: `users/${userName}` })
 }
 ```
+
+Criar arquivo em
+
+> public/_redirects
+
+```text
+/* /index.html 200
+```
