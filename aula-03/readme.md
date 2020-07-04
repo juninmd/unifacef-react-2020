@@ -579,6 +579,7 @@ import { Container, Grid, Header, Form, Dropdown, Card } from 'semantic-ui-react
 import { inject, observer } from 'mobx-react';
 import NewRouterStore from '../../mobx/router.store';
 import CoronaStore from './store';
+import Summary from '../../components/summary';
 
 interface Props {
   router: NewRouterStore;
@@ -612,12 +613,29 @@ export default class Corona extends React.Component<Props>{
 
         <Grid>
           <Grid.Row>
-            <Card.Group>
-
+            <Card.Group doubling={true} itemsPerRow={1}>
+              <Summary global={summary?.Global} />
             </Card.Group>
           </Grid.Row>
+          <Grid.Row>
+            <Form>
+              <Form.Group widths='equal'>
+                <Form.Field>
+                  <Dropdown
+                    placeholder='Selecione um país'
+                    fluid
+                    selection
+                    search={true}
+                    name='countryCode'
+                    value={countryCode}
+                    clearable={true}
+                    onChange={handleForm}
+                    options={[]} />
+                </Form.Field>
+              </Form.Group>
+            </Form>
+          </Grid.Row>
         </Grid>
-
       </Container>
     )
   }
