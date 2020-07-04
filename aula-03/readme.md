@@ -466,6 +466,8 @@ export const getUser = (userName: string) => {
 }
 ```
 
+## Corrigir problema de rotas
+
 Criar arquivo em
 
 > public/_redirects
