@@ -2,7 +2,7 @@
 
 * [Fabricio Coutinho de Medeiros](https://github.com/fcamedeiros/unifacef-react-typescript)
 * [Willyan Luindayk Machado](https://github.com/luindayk/unifacef-react-frontend)
-* [Gabriel Chiarelo]()
+* [Gabriel Chiarelo](https://github.com/gabrielborc/unifacef-reactjs-typescript)
 * [Danilo S. Andrade](https://github.com/daniloandrade47/unifacef-react-typscript.git)
 * [Bruno Brancalhão](https://github.com/brunobrancalhao/unifacef-react)
 * [Alex Felipe Barbosa](https://github.com/AlexFelipeBarbosa/react_face)
