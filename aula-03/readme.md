@@ -7,6 +7,10 @@
 * [CEP](https://www.republicavirtual.com.br/cep/exemplos.php)
 * [JSON2TS](http://www.json2ts.com/)
 
+## Recursos
+
+<https://react.semantic-ui.com/images/wireframe/short-paragraph.png>
+
 ## Ementa
 
 * Ajustando variáveis de ambiente do projeto
