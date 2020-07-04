@@ -5,6 +5,7 @@
 * [Projeto Final](https://github.com/juninmd/unifacef-react-typescript)
 * [Covid19](https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest)
 * [CEP](https://www.republicavirtual.com.br/cep/exemplos.php)
+* [JSON2TS](http://www.json2ts.com/)
 
 ## Ementa
 
