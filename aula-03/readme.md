@@ -21,14 +21,16 @@ Coloque todas as variáveis do seu projeto dentro do arquivo .env,
 process.env.REACT_APP_*
 ```
 
+Ficando assim por exemplo
+
 ```.env
-REACT_APP_SENTRY_DSN=*
+REACT_APP_SENTRY_DSN=<seu token do sentry>
 REACT_APP_CEP_URL=http://cep.republicavirtual.com.br/web_cep.php
 REACT_APP_ECONOMIA_URL=https://economia.awesomeapi.com.br/json/all
 REACT_APP_GITHUB_URL=https://api.github.com
 REACT_APP_STAR_WARS_URL=https://star-wars-api-unifacef.herokuapp.com
 REACT_APP_CORONA_URL=https://api.covid19api.com
-REACT_APP_ONE_SIGNAL=*
+REACT_APP_ONE_SIGNAL=<seu token do one signal>
 ```
 
 ## OneSignal
