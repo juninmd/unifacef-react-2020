@@ -791,3 +791,19 @@ export default function Country(props: Props) {
   )
 }
 ```
+
+> src/containers/login/style.css
+
+```css
+.login {
+  background-color: #0083ca;
+-webkit-justify-content: center;
+justify-content: center;
+-webkit-align-items: center;
+align-items: center;
+height: 100%;
+padding: 40px;
+overflow: auto;
+height: 100vh;
+}
+```
