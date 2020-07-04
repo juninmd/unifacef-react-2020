@@ -568,3 +568,98 @@ export default class CoronaStore {
 const corona = new CoronaStore();
 export { corona };
 ```
+
+!Danger! (código parcial)
+
+> src/containers/corona/index.tsx
+
+```tsx
+import * as React from 'react';
+import { Container, Grid, Header, Form, Dropdown, Card } from 'semantic-ui-react';
+import { inject, observer } from 'mobx-react';
+import NewRouterStore from '../../mobx/router.store';
+import CoronaStore from './store';
+
+interface Props {
+  router: NewRouterStore;
+  corona: CoronaStore
+}
+@inject('router', 'corona')
+@observer
+export default class Corona extends React.Component<Props>{
+
+
+  async componentDidMount() {
+    const { getCountries, getSummary } = this.props.corona;
+    await Promise.all([getCountries(), getSummary()]);
+  }
+
+  render() {
+    const { summary, countryCode, handleForm } = this.props.corona;
+
+    return (
+      <Container>
+        <Grid divided='vertically'>
+          <Grid.Row columns={2}>
+            <Header color='blue' as='h2'>
+              <Header.Content>
+                Corona
+              <Header.Subheader>Sumário Mundial {(new Date()).toLocaleDateString()}</Header.Subheader>
+              </Header.Content>
+            </Header>
+          </Grid.Row>
+        </Grid>
+
+        <Grid>
+          <Grid.Row>
+            <Card.Group>
+
+            </Card.Group>
+          </Grid.Row>
+        </Grid>
+
+      </Container>
+    )
+  }
+
+}
+```
+
+!Danger! (código parcial)
+
+> src/components/summary/index.tsx
+
+```tsx
+import React from 'react';
+import { Card, Feed, Grid } from 'semantic-ui-react';
+import { IGlobal } from '../../apis/corona.api';
+
+interface Props {
+  global?: IGlobal;
+}
+
+export default function Summary(props: Props) {
+
+  const { global } = props;
+
+  if (!global) {
+    return <></>
+  }
+
+  return (
+    <Card color='blue' centered={true} fluid={true}>
+      <Card.Content>
+        <Card.Header>Mundial</Card.Header>
+        <Card.Description>
+          <Grid columns={2}>
+            <Grid.Column>
+              
+            </Grid.Column>
+          </Grid>
+        </Card.Description>
+      </Card.Content>
+    </Card>
+  )
+
+}
+```
