@@ -21,7 +21,7 @@
 * [Ryhan Gustavo Brunello](https://github.com/ryhangbrunello/unifacef-react-rgb)
 * [CLEVELANDIO MARGIO DA SILVA](https://github.com/Paratiy/unifacef-react-typescript)
 * [Iago Bettarello](https://github.com/bettarelloiago/unifacef-react-typescript)
-* [Kenneth Gottschalk de Azevedo]()
+* [Kenneth Gottschalk de Azevedo](https://github.com/kennethgaz/react-js-unifacef)
 * [Loner Ribeiro Patti](https://github.com/lonerpatti/unifacef-react-typescript.git)
 * [André Luis Borges](https://github.com/Andre-Borges/unifacef-react)
 * [Rafael Ortolani](https://github.com/rafaelortolani/react-temporario)
