@@ -11,7 +11,7 @@
 * [Caio Cesar Alves Borges](https://github.com/caioborges89/unifacef-react-cotacao)
 * [Miguel Molina]()
 * [Luismar Pavani](https://github.com/LuismarPavani/unifacef-react-typescript)
-* [Caio Santos Freitas]()
+* [Caio Santos Freitas](https://github.com/caiosantosf/react-typescript)
 * [Lucas Rafael](https://github.com/lukasrafael1407/React-Unifacef)
 * [Everson Pereira](https://github.com/eversonpereira/react)
 * [Fernando Soares](https://github.com/fernandohfs/unifacef-reactjs-typescript)
